@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Everlast Welders | Welders and Plasma Cutters Since 2004 | San Francisco</title>
+<meta name="description" content="About Everlast Welders: founded in San Francisco in 2004, the company develops welders and plasma cutters through operator-informed design and U.S.-based support."/>
+<link rel="canonical" href="https://everlastwelders.netlify.app/about.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/style.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  const _sb=supabase.createClient('https://aowblircaymwuymcmllh.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvd2JsaXJjYXltd3V5bWNtbGxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzMzExMjcsImV4cCI6MjA2NzkwNzEyN30.qS7jxVwu83zEYMvxNo7C_2dtVrSZ6wYIFiNtoN69UkQ');
+  const _cid='Everlast Welders';
+  async function loadSBLinks(){
+    const[{data:soc},{data:news}]=await Promise.all([
+      _sb.from('social_media').select('*').eq('client_id',_cid),
+      _sb.from('news_links').select('*').eq('client_id',_cid)
+    ]);
+    const render=(ids,data)=>ids.forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el||!data)return;
+      el.innerHTML='';
+      data.forEach(l=>{
+        const a=document.createElement('a');
+        a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';a.title=l.name;
+        a.innerHTML='<img src="'+l.icon+'" alt="'+l.name+'" style="width:30px;height:30px;border-radius:4px"/>';
+        el.appendChild(a);
+      });
+    });
+    render(['sml-soc-about'],soc);
+    render(['sml-news-about'],news);
+  }
+  document.addEventListener('DOMContentLoaded',loadSBLinks);
+})();
+</script>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Everlast Welders"/>
+<meta property="og:title" content="About Everlast Welders | Welders and Plasma Cutters Since 2004 | San Francisco"/>
+<meta property="og:description" content="About Everlast Welders: founded in San Francisco in 2004, the company develops welders and plasma cutters through operator-informed design and U.S.-based support."/>
+<meta property="og:image" content="https://everlastwelders.netlify.app/images/hero.jpg"/>
+<meta property="og:url" content="https://everlastwelders.netlify.app/about.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://everlastwelders.netlify.app/#organization",
+      "name": "Everlast Welders",
+      "legalName": "Everlast Power Products Inc.",
+      "alternateName": "Everlast",
+      "url": "https://everlastwelders.netlify.app/",
+      "image": "https://everlastwelders.netlify.app/images/hero.jpg",
+      "logo": "https://everlastwelders.netlify.app/images/hero.jpg",
+      "description": "Everlast Welders (Everlast Power Products Inc.) develops welding machines and plasma cutters for home garages, professional shops, and worksites, combining operator-informed design and offshore manufacturing with U.S.-based customer service, inventory, and product servicing.",
+      "foundingDate": "2004",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "San Francisco, California",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "San Francisco",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      },
+      "knowsAbout": [
+        "Welding equipment",
+        "Plasma cutters",
+        "IGBT inverter technology"
+      ],
+      "sameAs": [
+        "https://everlastwelders.com",
+        "https://x.com/Everlast004",
+        "https://bsky.app/profile/everlastwelders01.bsky.social",
+        "https://www.quora.com/profile/Everlast-Welders-2",
+        "https://about.me/EverlastWelders01",
+        "https://dribbble.com/EverlastWelders01",
+        "https://vimeo.com/everlastwelders01",
+        "https://soundcloud.com/everlastwelders01",
+        "https://www.f6s.com/everlast-welders",
+        "https://www.reddit.com/user/EverlastWelders01/",
+        "https://github.com/EverlastWelders01",
+        "https://www.behance.net/everlastwelders"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://everlastwelders.netlify.app/#website",
+      "name": "Everlast Welders",
+      "url": "https://everlastwelders.netlify.app/",
+      "publisher": {
+        "@id": "https://everlastwelders.netlify.app/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://everlastwelders.netlify.app/about.html#webpage",
+      "url": "https://everlastwelders.netlify.app/about.html",
+      "name": "About Everlast Welders | Welders and Plasma Cutters Since 2004 | San Francisco",
+      "description": "About Everlast Welders: founded in San Francisco in 2004, the company develops welders and plasma cutters through operator-informed design and U.S.-based support.",
+      "isPartOf": {
+        "@id": "https://everlastwelders.netlify.app/#website"
+      },
+      "mainEntity": {
+        "@id": "https://everlastwelders.netlify.app/#organization"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ══ NAV ═══════════════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Everlast<span> Welders</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a class="active" href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ PAGE HERO ═════════════════════════════════════════════════ -->
+<div class="pg-hero">
+  <p class="eyebrow" style="color:rgba(255,255,255,.55)">Learn More</p>
+  <h1>Everlast Welders</h1>
+  <p class="pg-sub">A San Francisco-founded maker of welders and plasma cutters, built on operator feedback, named components, and U.S.-based support.</p>
+</div>
+
+<!-- ══ PROFILE CARD ══════════════════════════════════════════════ -->
+<div class="pc-wrap">
+  <div class="pc">
+    <div class="pc-ph"><img src="images/hero.jpg" alt="Welder at work in a steel fabrication shop"/></div>
+    <div>
+      <div class="pc-nm">Everlast Welders</div>
+      <div class="pc-rl">Welders and Plasma Cutters Since 2004</div>
+      <div class="pc-lc">Founded in San Francisco, California</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT SECTIONS + SIDEBAR ══════════════════════════════════ -->
+<div class="am-wrap">
+  <div class="am-inner">
+    <div>
+
+      <div class="csec">
+        <p class="cey">Origins</p>
+        <h2>From San Francisco Startup to Multinational Distribution</h2>
+        <p>Everlast Welders, the welding brand of Everlast Power Products Inc., was founded in San Francisco, California, in 2004. The business began online as a small e-commerce operation and later expanded its distribution internationally, building a network of distributorships in multiple countries.</p>
+        <p>That history still shapes how the company works. International production and distribution sit alongside a domestic support base, and the lean habits of an online business remain part of its approach to pricing. Current product listings are published on <a href="https://everlastwelders.com" target="_blank" rel="noopener">the official Everlast Welders website</a>.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Product Development</p>
+        <h2>Design That Starts With the Operator</h2>
+        <p>Everlast builds its development process around the person using the machine. Operator feedback informs design decisions before engineers finalize performance requirements, so the intended use of a welder or plasma cutter is part of the discussion from the start. The company develops equipment for home garages, professional welding shops, and worksites.</p>
+        <p>A closer look at <a href="product-development-priorities.html">how operator needs shape Everlast equipment</a> covers the relationship between feedback and engineering in more detail. The same project-first thinking applies to the space around the machine, the subject of <a href="planning-home-welding-workshop.html">planning a home welding workshop</a>.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Technology</p>
+        <h2>The 2008 Power Series and IGBT Inverters</h2>
+        <p>In 2008, Everlast introduced its first-generation Power series of IGBT platform inverter welders and plasma cutters. IGBT stands for insulated-gate bipolar transistor, a semiconductor switch used in inverter power supplies to convert incoming electrical power for the welding or cutting process.</p>
+        <p>The platform is one part of the company’s product approach rather than a measure of any single machine, whose performance depends on the documented specifications for that model. The company also maintains <a href="https://vimeo.com/everlastwelders01" target="_blank" rel="noopener">the Everlast Welders Vimeo channel</a>.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Manufacturing &amp; Value</p>
+        <h2>Offshore Production With Named Components</h2>
+        <p>Everlast Welders manufactures its equipment offshore using name-brand, off-the-shelf electronic components from suppliers including Infineon, Siemens, Texas Instruments, IXYS, Toshiba, Sharp, and Panasonic. Combined with a lean operating structure, offshore production supports the company’s approach to keeping purchase prices down.</p>
+        <p>Manufacturing location and component sourcing describe different things: one concerns where a machine is built, the other which electronic parts go into it. Neither replaces the specifications of a particular model. The company also posts through <a href="https://x.com/Everlast004" target="_blank" rel="noopener">Everlast Welders on X</a> and <a href="https://bsky.app/profile/everlastwelders01.bsky.social" target="_blank" rel="noopener">its Bluesky account</a>.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Support</p>
+        <h2>U.S.-Based Service, Inventory, and Warranty</h2>
+        <p>Customer service, inventory, and product servicing for Everlast Welders are staffed and based in the United States. These functions are domestic even though manufacturing takes place offshore, a distinction examined in <a href="us-operations-offshore-made-equipment.html">U.S. operations behind offshore-made equipment</a>.</p>
+        <p>Everlast offers warranty coverage and a 30-day satisfaction policy. Terms depend on the product and the purchase, so the current conditions for a specific machine are best confirmed with the company before relying on them.</p>
+      </div>
+
+    </div>
+
+    <aside class="sidebar-facts">
+      <div class="sb-box">
+        <div class="sb-title">Quick Facts</div>
+        <div class="fr"><span class="fl">Company</span><span class="fv">Everlast Power Products Inc.</span></div>
+        <div class="fr"><span class="fl">Brand</span><span class="fv">Everlast Welders</span></div>
+        <div class="fr"><span class="fl">Founded</span><span class="fv">2004, San Francisco, CA</span></div>
+        <div class="fr"><span class="fl">Products</span><span class="fv">Welders and plasma cutters</span></div>
+        <div class="fr"><span class="fl">Power Series</span><span class="fv">IGBT inverter platform, 2008</span></div>
+        <div class="fr"><span class="fl">Support</span><span class="fv">U.S.-based service and inventory</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ══ SOCIAL + PRESS ACCORDION ══════════════════════════════════ -->
+<div class="acc-section" style="background:var(--off)">
+  <div class="acc-wrap">
+    <button class="acc-btn" onclick="tog(this,'s-about')">Follow Everlast Welders on Social Media <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="s-about"><div id="sml-soc-about" class="social-media-list"></div></div>
+    <button class="acc-btn" onclick="tog(this,'n-about')">Everlast Welders in the Press <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="n-about"><div id="sml-news-about" class="social-media-list"></div></div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Everlast Welders. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+function tog(btn,id){
+  const c=document.getElementById(id),open=c.classList.contains('open');
+  document.querySelectorAll('.acc-body').forEach(e=>e.classList.remove('open'));
+  document.querySelectorAll('.acc-btn').forEach(e=>e.classList.remove('open'));
+  if(!open){c.classList.add('open');btn.classList.add('open');}
+}
+</script>
+</body>
+</html>
